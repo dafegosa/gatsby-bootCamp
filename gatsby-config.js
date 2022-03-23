@@ -5,6 +5,10 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'Daniel Fernando Gómez Salazar',
+    author: 'Dafegosa',
+  },
   plugins: [
     'gatsby-plugin-sass',
   ],

@@ -1,10 +1,19 @@
 import React from 'react'
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 
 const HeaderComponent = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
   return (
     <header className='header'>
-      <h1 className='mx-auto'>Daniel Fernando Gómez Salazar, Dafegosa</h1>
+      <h1 className='mx-auto'>{data.site.siteMetadata.title}</h1>
       <nav>
         <ul>
           <li>
