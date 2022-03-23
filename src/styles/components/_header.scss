@@ -1,0 +1,44 @@
+.header {
+  h1 {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      li {
+        margin: 0 0.5rem;
+        list-style: none;
+      }
+    }
+  }
+  &__link {
+    color: rgb(199, 190, 190);
+    font-size: 0.9rem;
+    text-decoration: none;
+    &:hover {
+      color: rgb(195, 143, 143);
+    }
+    &-active {
+      border-bottom: 2px solid rgb(195, 143, 143);
+      color: rgb(195, 143, 143);
+      font-weight: bolder;
+      padding-bottom: 3px;
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .header {
+    nav {
+      ul {
+        li {
+          margin: 0 2rem;
+        }
+      }
+    }
+  }
+}
